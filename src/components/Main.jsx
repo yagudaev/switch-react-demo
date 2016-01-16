@@ -3,6 +3,9 @@ require('styles/App.scss');
 
 import React from 'react';
 import { Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
+import i18next from 'i18next';
+let t = i18next.t.bind(i18next);
+
 import About from './About';
 import Shop from './Shop';
 import Contact from './Contact'
@@ -13,9 +16,9 @@ class App extends React.Component {
       <div className="app">
         <header>
           <ul className="inline-list menu">
-            <li className="menu-item"><Link to="about">About</Link></li>
-            <li className="menu-item"><Link to="shop">Shop</Link></li>
-            <li className="menu-item"><Link to="contact">Contact</Link></li>
+            <li className="menu-item"><Link to="about">{t('menu.about')}</Link></li>
+            <li className="menu-item"><Link to="shop">{t('menu.shop')}</Link></li>
+            <li className="menu-item"><Link to="contact">{t('menu.contact')}</Link></li>
           </ul>
         </header>
         {this.props.children}

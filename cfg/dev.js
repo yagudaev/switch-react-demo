@@ -5,9 +5,8 @@ let webpack = require('webpack');
 let _ = require('lodash');
 
 let baseConfig = require('./base');
-
 // Add needed plugins here
-let BowerWebpackPlugin = require('bower-webpack-plugin');
+let CopyWebpackPlugin = require('copy-webpack-plugin');
 
 let config = _.merge({
   entry: [
@@ -20,9 +19,7 @@ let config = _.merge({
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new BowerWebpackPlugin({
-      searchResolveModulesDirectories: false
-    })
+    new CopyWebpackPlugin([{from: 'src/locales', to: 'locales'}], {})
   ]
 }, baseConfig);
 

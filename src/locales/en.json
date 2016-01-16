@@ -1,0 +1,19 @@
+{
+  "menu": {
+    "about": "About",
+    "contact": "Contact",
+    "shop": "Shop"
+  },
+  "aboutPage": {
+    "title": "About",
+    "content": "Established in 1983 SnowShop has been serving the unique needs of snowboarders. Occasionally making fun of the two plankers, yes, those pesky skiers."
+  },
+  "shopPage": {
+    "title": "Shop"
+  },
+  "contactPage": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message"
+  }
+}

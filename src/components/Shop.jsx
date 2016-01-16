@@ -1,4 +1,6 @@
 import React from 'react';
+import i18next from 'i18next';
+let t = i18next.t.bind(i18next);
 
 let images = [];
 for(var i = 1; i <= 9; i++) {
@@ -14,7 +16,7 @@ class ShopComponent extends React.Component {
   render() {
     return (
       <div className="index">
-        <h1>Snowboard shop</h1>
+        <h1>{t('shopPage.title')}</h1>
         {this.renderItems()}
       </div>
     );
