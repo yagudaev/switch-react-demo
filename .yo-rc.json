@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "ecommerceDemo",
+    "style": "scss",
+    "postcss": true
+  }
+}

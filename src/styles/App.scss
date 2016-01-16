@@ -1,0 +1,70 @@
+/* Base Application Styles */
+body {
+  color: #fff;
+  background: #222;
+  padding: 20px;
+}
+
+.index img {
+  margin: 10px;
+  border-radius: 4px;
+  background: #fff;
+  display: block;
+  float: left;
+}
+
+.index img:nth-child(3n) {
+  clear: right;
+}
+
+.index .notice {
+  margin: 20px auto;
+  padding: 15px 0;
+  text-align: center;
+  border: 1px solid #000;
+  border-width: 1px 0;
+  background: #666;
+}
+
+.inline-list {
+  padding-left: 0;
+
+  li {
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+}
+
+a {
+  color: orange;
+}
+
+.form-rows {
+  input, textarea {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 12px;
+    color: black;
+  }
+
+  textarea {
+    height: 200px;
+  }
+}
+
+.menu {
+  .menu-item:after {
+    content: "|";
+    padding-left: 8px;
+  }
+
+  .menu-item:last-child:after {
+    display: none;
+    content: "";
+  }
+}
