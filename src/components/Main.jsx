@@ -10,7 +10,13 @@ import About from './About';
 import Shop from './Shop';
 import Contact from './Contact'
 
+let language = (window.location.search.match(/lang=([^&]*)/) || [null, 'en'])[1];
+
 class App extends React.Component {
+  selectLanguage(ev){
+    let language = ev.currentTarget.value;
+    window.location.search = `?lang=${language}`;
+  }
   render() {
     return (
       <div className="app">
@@ -19,6 +25,12 @@ class App extends React.Component {
             <li className="menu-item"><Link to="about">{t('menu.about')}</Link></li>
             <li className="menu-item"><Link to="shop">{t('menu.shop')}</Link></li>
             <li className="menu-item"><Link to="contact">{t('menu.contact')}</Link></li>
+            <li className="menu-item">
+              <select onChange={this.selectLanguage} defaultValue={language}>
+                <option value="en">English</option>
+                <option value="fr">French</option>
+              </select>
+            </li>
           </ul>
         </header>
         {this.props.children}
