@@ -16,7 +16,6 @@ i18next
       loadPath: `/locales/{{lng}}.json?cacheBuster=${Math.random()}`
     }
   }, () => {
-    console.log(i18next.t('aboutPage.title'))
     ReactDOM.render(<App />, document.getElementById('app'));
   }
 );

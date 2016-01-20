@@ -15,7 +15,7 @@ let config = _.merge({
     './src/index'
   ],
   cache: true,
-  devtool: 'eval',
+  devtool: 'eval-source-maps',
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
